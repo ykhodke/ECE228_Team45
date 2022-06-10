@@ -266,7 +266,7 @@ valid_acc_yk = np.zeros([1])
 
 lr = 1e-3
 weight_decay = 1e-4
-epochs = 500
+epochs = 250
 best_prec = 0
 
 model = nn.DataParallel(model).cuda()
@@ -313,7 +313,7 @@ plt.ylabel("Accuracy")
 plt.plot(epochs_plt, loss_yk, label = "training_loss")
 plt.legend()
 plt.show()
-plt.savefig("train_loss.png")
+plt.savefig('train_loss.png')
 
 plt.title("Model Train Accuracy over Time") 
 plt.xlabel("Epochs") 
@@ -321,7 +321,7 @@ plt.ylabel("Accuracy")
 plt.plot(epochs_plt, train_acc_yk, label = "training_accuracy")
 plt.legend()
 plt.show()
-plt.savefig("train_accuracy.png")
+plt.savefig('train_accuracy.png')
 
 plt.title("Model Testing Accuracy over Time") 
 plt.xlabel("Epochs") 
@@ -329,7 +329,7 @@ plt.ylabel("Accuracy")
 plt.plot(epochs_plt, valid_acc_yk, label = "training_accuracy")
 plt.legend()
 plt.show()
-plt.savefig("train_accuracy.png")
+plt.savefig('train_accuracy.png')
 
 
 
